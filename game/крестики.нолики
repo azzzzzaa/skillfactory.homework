@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 PLAYER_SYMBOLS = "0.X"
 ROW_INDICES = "ABC"
 COLUMN_INDICES = "123"
@@ -21,49 +29,33 @@ print_game_map(game_map)
 current_player = 1
 
 While True:
-player_input = input()
-if len (player_input) !=2:
-   pass
-player_row,player_column = player_input
-player_row = ROW_INDICES.find(player_row)
-  if player_row != -1:
-    pass
-player_column = COLUMN_INDICES.find(player_column)
-  if player_column != -1:
-    pass
-if game_map[player_row][player_column] > 0:
-    pass
+    print_game_up(game_up)
 
-game_map[][] = current_player
+    player_input = input(f"Игрок №{current_player},введите позицию: ")
+    if len (player_input) !=2:
+        print("Введено неверное количество символов.Формат: А1")
+        continue
 
-if current_player == 1:
-  current_player = 2
-elif current_player == 2:
-  current_player = 1
+    player_row,player_column = player_input
+    player_row = ROW_INDICES.find(player_row)
+    if player_row == -1:
+        print("Введен неверный номер ряда.Укажите букву:", ','.join(ROW_INDICES))
+        continue
 
-current_player = 2
+    player_column = COLUMN_INDICES.find(player_column)
+    if player_column == -1:
+         print("Введен неверный номер ряда.Укажите цифру:", ','.join(COLUMN_INDICES))
+         continue
 
-player_input = input()
-if len (player_input) !=2:
-   pass
-player_row,player_column = player_input
-player_row = ROW_INDICES.find(player_row)
-  if player_row != -1:
-    pass
-player_column = COLUMN_INDICES.find(player_column)
-  if player_column != -1:
-    pass
-if game_map[player_row][player_column] > 0:
-    pass
+    if game_map[player_row][player_column] > 0:
+         print("Эта ячейка уже занят,выберите другую")
+         continue
+    game_map[][] = current_player
 
-game_map[][] = current_player
-
-if current_player == 1:
-  current_player = 2
-elif current_player == 2:
-  current_player = 1
-
-
-else:
-  print("Неверный номер игрока")
-  exit(1)
+    if current_player == 1:
+        current_player = 2
+    elif current_player == 2:
+        current_player = 1
+    else:
+        print("Неверный номер игрока")
+        exit(1)
