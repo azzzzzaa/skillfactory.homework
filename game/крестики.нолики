@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 PLAYER_SYMBOLS = "0.X"
 ROW_INDICES = "ABC"
 COLUMN_INDICES = "123"
@@ -14,6 +7,14 @@ def print_game_map(gm):
   for row in gm:
      print(PLAYER_SYMBOLS[cell], end = " " )
 print()
+
+def is_comleted(gm)
+    for row in gm:
+        cell1,cell2,cell3 = row
+        if (cell == cell2 == cell3) and cell1 !=0:
+             return True,cell1
+
+  return False, 0
 
 game_map = []
 for _ in range(3):
