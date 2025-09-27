@@ -1,0 +1,69 @@
+PLAYER_SYMBOLS = "0.X"
+ROW_INDICES = "ABC"
+COLUMN_INDICES = "123"
+
+def print_game_map(gm):
+  for row in gm:
+     print(PLAYER_SYMBOLS[cell], end = " " )
+print()
+
+game_map = []
+for _ in range(3):
+  temp = []
+  for _ in range(3):
+    temp.append(0)
+ game_map.append(temp)
+
+game_map[1][1] = 1
+game_map[2][2] = 2
+print_game_map(game_map)
+
+current_player = 1
+
+While True:
+player_input = input()
+if len (player_input) !=2:
+   pass
+player_row,player_column = player_input
+player_row = ROW_INDICES.find(player_row)
+  if player_row != -1:
+    pass
+player_column = COLUMN_INDICES.find(player_column)
+  if player_column != -1:
+    pass
+if game_map[player_row][player_column] > 0:
+    pass
+
+game_map[][] = current_player
+
+if current_player == 1:
+  current_player = 2
+elif current_player == 2:
+  current_player = 1
+
+current_player = 2
+
+player_input = input()
+if len (player_input) !=2:
+   pass
+player_row,player_column = player_input
+player_row = ROW_INDICES.find(player_row)
+  if player_row != -1:
+    pass
+player_column = COLUMN_INDICES.find(player_column)
+  if player_column != -1:
+    pass
+if game_map[player_row][player_column] > 0:
+    pass
+
+game_map[][] = current_player
+
+if current_player == 1:
+  current_player = 2
+elif current_player == 2:
+  current_player = 1
+
+
+else:
+  print("Неверный номер игрока")
+  exit(1)
