@@ -10,11 +10,37 @@ print()
 
 def is_comleted(gm)
     for row in gm:
-        cell1,cell2,cell3 = row
-        if (cell == cell2 == cell3) and cell1 !=0:
-             return True,cell1
+        first = row [0]
+        if first != 0:
+            for cell in row [1:]:
+                if cell != first,
+                     break
+    else:
+             return True,first
 
   return False, 0
+
+for j in range(len(gm[0])):
+   first = gm [0][j]
+  if first != 0: 
+      for i in range(1, len(gm)):
+          if gm[i][j] != first,
+                     break
+    else:
+             return True,first
+
+diag =  gm[0][0]
+ivn_diag = gm[0][len(gm) - 1]
+for i in range(len(gm)):
+    if gm[i][i] != diag:
+       break
+    gm[i][len(gm) - i - 1] != ivn_diag:
+       break
+else:
+    return True,
+
+  return False, 0
+
 
 game_map = []
 for _ in range(3):
